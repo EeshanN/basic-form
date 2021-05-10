@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apply</title>
+	<link rel="stylesheet" type="text/css" href="basic.css">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<script async defer src="script.js"></script>
+</head>
+<body>
+	
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png" width="150" height="90">
+	
+	<h1>Coursera Web Developer internship: Apply Here</h1>
+	<form class="form-container" name="myForm" onsubmit="return validateForm()" action="submit.html" method="GET">
+		<div id="name">
+			<label for="name">Name</label>
+			<input type="text" name="fname" required> <b><span class="formerror"> </span></b>
+		</div>
+		
+		<div id="email">
+			<label for="email">Email</label>
+			<input type="email" name="femail"> <b><span class="formerror"> </span></b>
+		</div>
+
+		<div id="phone">
+			<label for="phone">Phone No.</label>
+			<input type="phone" name="fphone"> <b><span class="formerror"> </span></b>
+		</div>
+
+
+		<div>
+			Gender: 
+			<div class="gender">
+				<label for="male">Male</label>
+				<input type="radio" name="gender" id="male"> <br>
+				<label for="female">Female</label>
+				<input type="radio" name="gender" id="female"> <br>
+				<label for="neither">Prefer not to say</label>
+				<input type="radio" name="gender" id="neither">
+			</div>			
+		</div>
+
+		<div>
+			<label for="date">Birthdate</label>
+			<input type="date" name="date" id="date">
+		</div>
+
+		<div>
+			<label for="sop">Why do you want to work with us?</label>
+			<textarea id="sop" name="sop" rows="4" cols="50"></textarea>
+		</div>
+
+		<div>
+			<label for="file">CV</label>
+			<input type="file" id="file" name="file">
+		</div>
+
+		<div id="pass">
+			<label>Password<label>
+			<input type="password" name="fpass" required><b><span class="formerror"> </span></b>
+		</div>		
+
+		<div id="cpass">
+			<label>Confrim Password<label>
+			<input type="password" name="fcpass" required><b><span class="formerror"> </span></b>
+		</div>	
+
+		<div>
+			<label for="loc">Preferred location?</label>
+			<select name="loc" id="loc">
+				<option value="USA" selected>USA</option>
+				<option value="Canada">Canada</option>
+			</select>
+		</div>
+
+		<button type="reset" class="reset" onclick="clearErrors()">Reset</button>
+		<input class="btn" type="submit" value="Submit">
+	</form>
+
+</body>
+</html>
